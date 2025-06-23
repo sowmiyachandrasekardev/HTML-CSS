@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+:root {
+  --bg1: #fff;
+  --bg2: #f7f7f7;
+  --content1: #000;
+  --content2: #2d2d2d;
+}
+[data-theme="dark"] {
+  --bg1: #000;
+  --bg2: #2d2d2d;
+  --content1: #fff;
+  --content2: #f7f7f7;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--content1);
+}
+img {
+  display: block;
+}
+.container {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  max-width: 436px;
+  max-height: 840px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #c8c8c8;
+  background-color: var(--bg1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.img-block {
+  background: url("https://images.unsplash.com/photo-1728996152930-233c5aca21d7?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center/cover no-repeat;
+  max-width: 100%;
+  min-height: 436px;
+}
+.bottom {
+  background-color: var(--bg1);
+}
+.content-body {
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  display: flex;
+  gap: 10px;
+  padding-inline: 24px;
+  padding-block: 32px;
+  line-height: 28px;
+}
+.seperator {
+  display: flex;
+  padding-inline: 24px;
+  padding-block: 20px;
+  border-block: 1px solid #ececec;
+}
+.left-side,
+.right-side {
+  flex-grow: 1;
+  line-height: 20.46px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 32px;
+  padding-inline: 24px;
+  progress {
+    appearance: none;
+    height: 4px;
+    max-width: 50%;
+    display: block;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .division {
+    /* padding-left: 5px; */
+    margin-left: 5px;
+    color: #ffc700;
+  }
+  /* #progress-bar{
+    border-radius: 10px;
+  } */
+  progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+  }
+  progress::-webkit-progress-value {
+    background-color: #ffc700;
+    border-radius: 10px;
+  }
+}
+.right-side,
+.division {
+  font-weight: 300;
+  color: var(--content1);
+}
+dark {
+  .division {
+    color: #ffc700;
+  }
+}
